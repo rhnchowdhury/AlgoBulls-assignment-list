@@ -42,7 +42,7 @@ const Again: React.FC = () => {
                         <Test></Test>
                     </div>
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2023 Created by Ant UED</Footer>
+                <Footer style={{ textAlign: 'center', backgroundColor: '#001529', color: 'white' }}>Algo Bulls ©2023 Assignment</Footer>
             </Layout>
 
         </Layout>
