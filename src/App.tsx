@@ -1,13 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Test from './Components/Test';
+import Again from './Components/Again';
 
 function App() {
   return (
     <div className="App">
-      <Test></Test>
-    </div>
+
+      <Again></Again>
+
+
+    </div >
   );
 }
 
