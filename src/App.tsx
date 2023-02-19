@@ -1,13 +1,10 @@
 import './App.css';
-import Again from './Components/Again';
+import SideBar from './Components/SideBar';
 
 function App() {
   return (
     <div className="App">
-
-      <Again></Again>
-
-
+      <SideBar></SideBar>
     </div >
   );
 }

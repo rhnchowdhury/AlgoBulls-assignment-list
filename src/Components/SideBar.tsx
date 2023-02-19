@@ -1,11 +1,11 @@
 import React from 'react';
 import { UploadOutlined, UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Layout, Menu, theme } from 'antd';
-import Test from './Test';
+import Home from './Home';
 
 const { Content, Footer, Sider } = Layout;
 
-const Again: React.FC = () => {
+const SideBar: React.FC = () => {
     const {
         token: { colorBgContainer },
     } = theme.useToken();
@@ -39,7 +39,7 @@ const Again: React.FC = () => {
             <Layout>
                 <Content >
                     <div style={{ padding: 24, minHeight: 360, background: colorBgContainer }}>
-                        <Test></Test>
+                        <Home></Home>
                     </div>
                 </Content>
                 <Footer style={{ textAlign: 'center', backgroundColor: '#001529', color: 'white' }}>Algo Bulls ©2023 Assignment</Footer>
@@ -49,4 +49,4 @@ const Again: React.FC = () => {
     );
 };
 
-export default Again;
+export default SideBar;
