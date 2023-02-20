@@ -196,13 +196,11 @@ const Home = () => {
                                         paddingBlockEnd: 16,
                                     }}
                                 >
-                                    {/* <div style={{ flex: 1 }}>89：{info.totalScore}</div>
-                                    <div style={{ flex: 1 }}>90：{info.questions}</div> */}
                                     <div style={{ flex: 2 }}>
-                                        <ProFormDigit label="a" />
+                                        <ProFormDigit label="Title" />
                                     </div>
                                     <div style={{ flex: 2 }}>
-                                        <ProFormDigit label="b" />
+                                        <ProFormDigit label="Search" />
                                     </div>
                                 </div>
                             );
@@ -218,19 +216,6 @@ const Home = () => {
                         actionRef={actionRef}
                         formItemProps={{
                             label: 'A Title',
-                            // rules: [
-                            //     {
-                            //         validator: async (_, value) => {
-                            //             if (value.length < 1) {
-                            //                 throw new Error('请至少添加一个题库');
-                            //             }
-
-                            //             if (value.length > 5) {
-                            //                 throw new Error('最多可以设置五个题库');
-                            //             }
-                            //         },
-                            //     },
-                            // ],
                         }}
                         maxLength={10}
                         name="table"
@@ -240,11 +225,6 @@ const Home = () => {
                                 return { id: index + 1 };
                             },
                         }}
-                    // editable={{
-                    //     type: 'multiple',
-                    //     editableKeys,
-                    //     onChange: setEditableRowKeys,
-                    // }}
                     />
                 </ProForm>
             </div>
