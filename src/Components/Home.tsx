@@ -64,46 +64,46 @@ const Home = () => {
     const editableFormRef = useRef<EditableFormInstance>();
     const columns: ProColumns<DataSourceType>[] = [
         {
-            title: 'raihan',
+            title: 'Timestamp created',
             dataIndex: 'associate',
             valueType: 'text',
             ellipsis: true,
         },
         {
-            title: 'tanjim',
+            title: 'Title',
             key: 'type',
             dataIndex: 'type',
             valueType: 'select',
             valueEnum: {
-                multiple: { text: '多选题', status: 'Default' },
-                radio: { text: '单选题', status: 'Warning' },
+                multiple: { text: 's', status: 'Default' },
+                radio: { text: 'p', status: 'Warning' },
                 vacant: {
-                    text: '填空题',
+                    text: 'q',
                     status: 'Error',
                 },
                 judge: {
-                    text: '判断题',
+                    text: 'r',
                     status: 'Success',
                 },
             },
         },
         {
-            title: 'talha',
+            title: 'Description',
             dataIndex: 'questionsNum',
             valueType: 'digit',
         },
         {
-            title: 'konok',
+            title: 'Due Date',
             dataIndex: 'scoringMethod',
             valueType: 'select',
             request: async () => [
                 {
                     value: 'discrete',
-                    label: '离散型',
+                    label: 'x',
                 },
                 {
                     value: 'continuous',
-                    label: '连续型',
+                    label: 'y',
                 },
             ],
             fieldProps: (_, { rowIndex }) => {
@@ -116,7 +116,7 @@ const Home = () => {
             },
         },
         {
-            title: 'tanvir',
+            title: 'Tag',
             width: 150,
             dataIndex: 'fraction',
             valueType: (record) => {
@@ -134,7 +134,7 @@ const Home = () => {
                 })),
         },
         {
-            title: 'maria',
+            title: 'Status',
             valueType: 'option',
             render: (_, row) => [
                 <a
@@ -146,7 +146,7 @@ const Home = () => {
                         });
                     }}
                 >
-                    移除
+                    2
                 </a>,
                 <a
                     key="edit"
@@ -154,7 +154,7 @@ const Home = () => {
                         actionRef.current?.startEditable(row.id);
                     }}
                 >
-                    编辑
+                    1
                 </a>,
             ],
         },
@@ -196,13 +196,13 @@ const Home = () => {
                                         paddingBlockEnd: 16,
                                     }}
                                 >
-                                    <div style={{ flex: 1 }}>总分：{info.totalScore}</div>
-                                    <div style={{ flex: 1 }}>题数：{info.questions}</div>
+                                    {/* <div style={{ flex: 1 }}>89：{info.totalScore}</div>
+                                    <div style={{ flex: 1 }}>90：{info.questions}</div> */}
                                     <div style={{ flex: 2 }}>
-                                        <ProFormDigit label="及格分" />
+                                        <ProFormDigit label="a" />
                                     </div>
                                     <div style={{ flex: 2 }}>
-                                        <ProFormDigit label="考试时间(分钟)" />
+                                        <ProFormDigit label="b" />
                                     </div>
                                 </div>
                             );
@@ -217,20 +217,20 @@ const Home = () => {
                         controlled
                         actionRef={actionRef}
                         formItemProps={{
-                            label: '题库编辑',
-                            rules: [
-                                {
-                                    validator: async (_, value) => {
-                                        if (value.length < 1) {
-                                            throw new Error('请至少添加一个题库');
-                                        }
+                            label: 'A Title',
+                            // rules: [
+                            //     {
+                            //         validator: async (_, value) => {
+                            //             if (value.length < 1) {
+                            //                 throw new Error('请至少添加一个题库');
+                            //             }
 
-                                        if (value.length > 5) {
-                                            throw new Error('最多可以设置五个题库');
-                                        }
-                                    },
-                                },
-                            ],
+                            //             if (value.length > 5) {
+                            //                 throw new Error('最多可以设置五个题库');
+                            //             }
+                            //         },
+                            //     },
+                            // ],
                         }}
                         maxLength={10}
                         name="table"
@@ -240,11 +240,11 @@ const Home = () => {
                                 return { id: index + 1 };
                             },
                         }}
-                        editable={{
-                            type: 'multiple',
-                            editableKeys,
-                            onChange: setEditableRowKeys,
-                        }}
+                    // editable={{
+                    //     type: 'multiple',
+                    //     editableKeys,
+                    //     onChange: setEditableRowKeys,
+                    // }}
                     />
                 </ProForm>
             </div>
